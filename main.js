@@ -5,7 +5,7 @@ const { journeyMaker } = require("./journey.js")
 const cattleToDrive = 50
 const drovers = hireDrovers(cattleToDrive)
 const cattle = roundup(cattleToDrive)
-const journey = journeyMaker()
+const journey = journeyMaker(cattleToDrive)
 
 console.log(`
 ************************************************
@@ -25,9 +25,16 @@ console.log(`
 
 console.log(`You will be accompanying ${drovers.length} drovers as they drive ${cattleToDrive} cattle to Old Red's Ranch for grazing`)
 console.log(`\nThe herd is made of up the following types of cattle:`)
-console.log(`${cattle}\n`)
 
-console.log("Here is the team of drovers you will be joining")
+let cowBreed = ""
+for (const cow of cattle) {
+    cowBreed += `${cow.breed},`  
+    
+}
+
+console.log(cowBreed)
+
+console.log(`\nHere is the team of drovers you will be joining`)
 for (const drover of drovers) {
     console.log(`\t* ${drover.first_name} ${drover.last_name}`)
 }
