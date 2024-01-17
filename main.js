@@ -44,4 +44,3 @@ for (const area of journey) {
     console.log(`\t* ${area}`)
 }
 
-//test 3
