@@ -43,3 +43,5 @@ console.log("\n\nYour journey will take you through the wildness of the American
 for (const area of journey) {
     console.log(`\t* ${area}`)
 }
+
+//test
